@@ -2,7 +2,7 @@
 
 This repository contains a Swift class `ATDropDownButton` that creates a customizable dropdown button for iOS applications.  The button displays a `UITableView` containing a list of items when tapped.
 
-![Simulator Screenshot - iPhone 16 Pro - 2024-12-07 at 03 48 20](https://github.com/user-attachments/assets/953b1606-0a9b-47b9-abe2-85f9d6949448)
+<img width="200" alt="iPhone 16 Pro - 2024-12-07 at 03 48 20" src="https://github.com/user-attachments/assets/953b1606-0a9b-47b9-abe2-85f9d6949448"> 
 
 ## Features
 
