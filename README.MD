@@ -1,9 +1,6 @@
 //
 //  README.MD
 //  ATDropdownButton
-//
-//  Created by Amirhosein Memarian on 12/7/24.
-//
 
 # ATDropDownButton: A Customizable Dropdown Button
 
