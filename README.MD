@@ -2,6 +2,8 @@
 
 This repository contains a Swift class `ATDropDownButton` that creates a customizable dropdown button for iOS applications.  The button displays a `UITableView` containing a list of items when tapped.
 
+![Simulator Screenshot - iPhone 16 Pro - 2024-12-07 at 03 48 20](https://github.com/user-attachments/assets/953b1606-0a9b-47b9-abe2-85f9d6949448)
+
 ## Features
 
 * **Customizable Appearance:**  Easily adjust the font, text color, background color, selected background color, and border of the dropdown list.  You can also control the corner radius and separator style of the table view.
@@ -11,10 +13,8 @@ This repository contains a Swift class `ATDropDownButton` that creates a customi
 * **Transparent Background:** Includes a transparent overlay view to dismiss the dropdown when tapped outside.
 
 ## Requirements
-
 * iOS 13.0+
 * Swift 5.0+
-
 
 ## Installation
 
