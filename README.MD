@@ -1,7 +1,3 @@
-//
-//  README.MD
-//  ATDropdownButton
-
 # ATDropDownButton: A Customizable Dropdown Button
 
 This repository contains a Swift class `ATDropDownButton` that creates a customizable dropdown button for iOS applications.  The button displays a `UITableView` containing a list of items when tapped.
