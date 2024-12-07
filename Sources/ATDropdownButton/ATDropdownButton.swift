@@ -169,7 +169,6 @@ class ATDropDownButton: UIButton,
         tableView.isHidden = true
     }
 
-    // MARK: - UITableViewDataSource & UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
