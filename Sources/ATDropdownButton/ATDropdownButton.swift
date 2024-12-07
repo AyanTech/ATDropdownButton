@@ -98,14 +98,14 @@ open class ATDropDownButton: UIButton,
         self.addTarget(self, action: #selector(onButtonPressed), for: .touchUpInside)
     }
     
-    func configure(parentView: UIView, trailingImage: UIImage? = nil) {
+    public func configure(parentView: UIView, trailingImage: UIImage? = nil) {
         self.parentView = parentView
         
         setupTableView()
         setupTransparentView()
     }
     
-    func configData(dataSource: [String]) {
+    public func configData(dataSource: [String]) {
         self.dataSource = dataSource
         tableView.reloadData()
     }
