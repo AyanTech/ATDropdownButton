@@ -10,6 +10,43 @@ This repository contains a Swift class `ATDropDownButton` that creates a customi
 * **Closure-based Selection Handling:** Provides a closure to handle item selection events.
 * **Transparent Background:** Includes a transparent overlay view to dismiss the dropdown when tapped outside.
 
+## Requirements
+
+* iOS 13.0+
+* Swift 5.0+
+
+
+## Installation
+
+You can integrate `ATDropDownButton` into your project using Swift Package Manager (SPM) or by copying the source file directly. Below are the instructions for both methods.
+
+### Using Swift Package Manager (SPM)
+
+1. Open your Xcode project.
+2. Navigate to **File** > **Swift Packages** > **Add Package Dependency**.
+3. In the dialog that appears, enter the following URL:
+   ```
+   https://github.com/AyanTech/ATDropdownButton.git
+   ```
+4. Choose the version you want to install (usually the latest).
+5. Click **Next** and confirm by clicking **Finish**.
+
+Once added, you can import the package in your Swift files:
+
+```swift
+import ATDropdownButton
+```
+
+### Manual Installation
+
+If you prefer to add the project manually:
+
+1. Download or clone this repository from GitHub.
+   ```
+   git clone https://github.com/AyanTech/ATDropdownButton.git
+   ```
+2. Copy the `ATDropDownButton.swift` file into your Xcode project.
+3. Make sure to import `UIKit` at the beginning of any file where you use `ATDropDownButton`.
 
 ## Usage
 
@@ -49,17 +86,6 @@ dropDownButton.didSelectItem = { index, item in
 }
 self.view.addSubview(dropDownButton)
 ```
-
-
-## Installation
-
-You can integrate this component into your project by simply copying the `ATDropDownButton.swift` file into your project.
-
-## Requirements
-
-* iOS 13.0+
-* Swift 5.0+
-
 
 ## License
 
