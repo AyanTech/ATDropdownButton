@@ -4,7 +4,7 @@
 import Foundation
 import UIKit
 
-class ATDropDownButton: UIButton,
+open class ATDropDownButton: UIButton,
                         UITableViewDelegate,
                         UITableViewDataSource {
     private let tableView = UITableView()
@@ -12,85 +12,85 @@ class ATDropDownButton: UIButton,
     private var dataSource: [String] = []
     private var parentView: UIView?
     
-    var itemFont: UIFont = .systemFont(ofSize: 14) {
+    public var itemFont: UIFont = .systemFont(ofSize: 14) {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var itemTextColor: UIColor = .black {
+    public var itemTextColor: UIColor = .black {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var itemBackgroundColor: UIColor = .white {
+    public var itemBackgroundColor: UIColor = .white {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var itemSelectedBackgroundColor: UIColor = .lightGray {
+    public var itemSelectedBackgroundColor: UIColor = .lightGray {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var transparentViewBackgroundColor: UIColor = .black.withAlphaComponent(0.1) {
+    public var transparentViewBackgroundColor: UIColor = .black.withAlphaComponent(0.1) {
         didSet {
             transparentView.backgroundColor = transparentViewBackgroundColor
         }
     }
     
-    var canStartFromZeroX: Bool = false {
+    public var canStartFromZeroX: Bool = false {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var tableViewRowHeight: CGFloat = 40.0 {
+    public var tableViewRowHeight: CGFloat = 40.0 {
         didSet {
             tableView.reloadData()
         }
     }
     
-    var tableViewBorderColor: UIColor = .gray.withAlphaComponent(0.3) {
+    public var tableViewBorderColor: UIColor = .gray.withAlphaComponent(0.3) {
         didSet {
             tableView.layer.borderColor = tableViewBorderColor.cgColor
         }
     }
     
-    var tableViewBorderWidth: CGFloat = 1.0 {
+    public var tableViewBorderWidth: CGFloat = 1.0 {
         didSet {
             tableView.layer.borderWidth = tableViewBorderWidth
         }
     }
     
-    var tableViewSepratorStyle: UITableViewCell.SeparatorStyle = .none {
+    public var tableViewSepratorStyle: UITableViewCell.SeparatorStyle = .none {
         didSet {
             tableView.separatorStyle = tableViewSepratorStyle
         }
     }
     
-    var tableViewCornerRadius: CGFloat = 8.0 {
+    public var tableViewCornerRadius: CGFloat = 8.0 {
         didSet {
             tableView.layer.cornerRadius = tableViewCornerRadius
         }
     }
 
-    var didSelectItem: ((Int, String) -> Void)?
+    public var didSelectItem: ((Int, String) -> Void)?
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupButton()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(coder: coder)
         setupButton()
     }
     
-    override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
     }
     
@@ -169,11 +169,11 @@ class ATDropDownButton: UIButton,
         tableView.isHidden = true
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataSource.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = dataSource[indexPath.row]
         cell.textLabel?.font = itemFont
@@ -183,7 +183,7 @@ class ATDropDownButton: UIButton,
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedItem = dataSource[indexPath.row]
         self.setTitle(selectedItem, for: .normal)
         didSelectItem?(indexPath.row, selectedItem)
