@@ -77,6 +77,12 @@ open class ATDropDownButton: UIButton,
             tableView.layer.cornerRadius = tableViewCornerRadius
         }
     }
+    
+    public var itemTextAlignment: NSTextAlignment = .natural {
+        didSet {
+            tableView.reloadData()
+        }
+    }
 
     public var didSelectItem: ((Int, String) -> Void)?
     
@@ -98,7 +104,7 @@ open class ATDropDownButton: UIButton,
         self.addTarget(self, action: #selector(onButtonPressed), for: .touchUpInside)
     }
     
-    public func configure(parentView: UIView, trailingImage: UIImage? = nil) {
+    public func configure(parentView: UIView) {
         self.parentView = parentView
         
         setupTableView()
@@ -178,6 +184,7 @@ open class ATDropDownButton: UIButton,
         cell.textLabel?.text = dataSource[indexPath.row]
         cell.textLabel?.font = itemFont
         cell.textLabel?.textColor = itemTextColor
+        cell.textLabel?.textAlignment = itemTextAlignment
         cell.backgroundColor = itemBackgroundColor
         cell.selectedBackgroundView?.backgroundColor = itemSelectedBackgroundColor
         return cell
