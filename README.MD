@@ -77,7 +77,7 @@ If you prefer to add the project manually:
 ```swift
 // Example usage:
 let dropDownButton = ATDropDownButton(frame: CGRect(x: 100, y: 100, width: 150, height: 40))
-dropDownButton.configure(parentView: self.view, trailingImage: UIImage(systemName: "chevron.down"))
+dropDownButton.configure(parentView: self.view)
 dropDownButton.configData(dataSource: ["Item 1", "Item 2", "Item 3"])
 dropDownButton.itemTextColor = .white
 dropDownButton.itemBackgroundColor = .blue
